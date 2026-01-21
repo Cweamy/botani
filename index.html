@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ทะเบียนพรรณไม้</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="topbar">
+    <h1>🌿 ทะเบียนพรรณไม้</h1>
+</header>
+
+<main class="container">
+    <div class="grid" id="plantList"></div>
+</main>
+
+<!-- ===== POPUP ===== -->
+<div class="overlay" id="overlay">
+    <div class="popup">
+        <div class="popup-header">
+            <span>📖 รายละเอียดพรรณไม้</span>
+            <button onclick="closePopup()">×</button>
+        </div>
+
+        <div class="popup-content">
+            <img id="pImg">
+
+            <h2 id="pName"></h2>
+            <p class="sci" id="pSci"></p>
+
+            <hr>
+
+            <p><span class="label">รหัสพรรณไม้:</span> <span id="pId"></span></p>
+            <p><span class="label">วงศ์ (Family):</span> <span id="pFam"></span></p>
+            <p><span class="label">หมวดหมู่/ลักษณะวิสัย:</span> <span id="pType"></span></p>
+
+            <hr>
+
+            <p class="section">ลักษณะเด่น:</p>
+            <p id="pChar"></p>
+
+            <p><span class="label">สถานที่พบ:</span> <span id="pLoc"></span></p>
+            <p><span class="label">วันที่บันทึก:</span> <span id="pDate"></span></p>
+        </div>
+
+        <div class="popup-footer">
+            <button onclick="closePopup()">ปิด</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
